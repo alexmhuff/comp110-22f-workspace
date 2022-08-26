@@ -1,5 +1,5 @@
 """EX01 - Chardle - a cute step toward wordle."""
-___author___ = "730484416"
+__author__ = "730484416"
 
 five_character_word: str=input("Enter a 5-character word: ")
 if len(five_character_word)>5:
@@ -32,6 +32,6 @@ if single_character==five_character_word[4]:
 if instances_counter==0:
     print("No instances of " + single_character + " found in " + five_character_word)
 if instances_counter==1:
-    print(instances_counter, " instance of" + single_character + " found in " + five_character_word)
-if instances_counter>=2:
-    print(instances_counter, " instances of " + single_character + " found in " + five_character_word)
+    print("1 instance of" + single_character + " found in " + five_character_word)
+if instances_counter==2:
+    print("2 instances of " + single_character + " found in " + five_character_word)
