@@ -13,7 +13,7 @@ if len(single_character) != 1:
     print("Error: Character must be a single character.")
     exit()
 instances_counter: int = 0
-print("Searching for " + single_character + " in " + five_character_word)
+print(F"Searching for {single_character} in " + five_character_word)
 if single_character == five_character_word[0]:
     instances_counter = instances_counter + 1
     print(single_character + " found at index 0")
