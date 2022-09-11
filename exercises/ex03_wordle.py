@@ -12,6 +12,7 @@ def contains_char(secret_word: str, searching_char: str) -> bool:
         i += 1
     return False
 
+
 def emojified(guessed_word: str, SECRET: str) -> str:
     """Comparing guessed word to secret word and printing out corresponding emojis."""
     assert len(guessed_word) == len(SECRET)
@@ -30,12 +31,14 @@ def emojified(guessed_word: str, SECRET: str) -> str:
         i += 1
     return correct_characters
 
+
 def input_guess(expected_length: int) -> str:
     """Assuring that the guessed word is the same length as the secret word."""
     guessed_word = input(F"Enter a {expected_length} character word: ")
     while len(guessed_word) != expected_length:
         guessed_word = input(F"That wasn't {expected_length} chars! Try again: ")
     return guessed_word
+
 
 def main() -> None:
     """The entrypoint of the program and main game loop."""
@@ -52,6 +55,7 @@ def main() -> None:
         i += 1
     if guessed_word != SECRET:
         print("X/6 - Sorry, try again tomorrow!")
+
 
 if __name__ == "__main__":
     main()
