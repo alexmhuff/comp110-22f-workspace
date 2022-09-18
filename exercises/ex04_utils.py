@@ -1,8 +1,9 @@
 """'list' Utility Functions."""
 __author__ = "7304416"
 
+
 def all(list: list[int], match: int) -> bool:
-    """n"""
+    """Find if one integer matches all integers in a list."""
     i: int = 0
     i2: int = 0
     while i < len(list):
@@ -16,7 +17,7 @@ def all(list: list[int], match: int) -> bool:
 
 
 def max(list: list[int]) -> int:
-    """a"""
+    """Find the highest number in a list."""
     if len(list) == 0:
         raise ValueError("max() arg is an empty List")
     i: int = 0
@@ -29,9 +30,8 @@ def max(list: list[int]) -> int:
 
 
 def is_equal(list_1: list[int], list_2: list[int]) -> bool:
-    """w"""
+    """Find if two lists match entirely."""
     if list_1 == list_2:
         return True
     else:
         return False
-
