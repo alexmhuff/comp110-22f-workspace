@@ -4,6 +4,8 @@ __author__ = "7304416"
 
 def all(list: list[int], match: int) -> bool:
     """Find if one integer matches all integers in a list."""
+    if len(list) == 0:
+        return False
     i: int = 0
     i2: int = 0
     while i < len(list):
