@@ -36,7 +36,7 @@ def sub(list_1: list[int], start: int, end: int) -> list[int]:
     if end < 0:
         return []
     if end > len(list_1):
-        end = len(list_1) - 1
+        end = len(list_1)
     if start > len(list_1):
         return []
     while i < len(list_1):
