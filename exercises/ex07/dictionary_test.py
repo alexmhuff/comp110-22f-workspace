@@ -22,5 +22,37 @@ def test_invert_empty() -> None:
     assert invert(given_dict) == {}
 
 
-# favorite colors example: {a: green, b: blue, c: green, d: purple, e: blue}
-#
+def test_favorite_color_friends() -> None:
+    """Testing the most common favorite color out of my friends."""
+    fave_colors: dict[str, str] = {"Alex": "red", "Gemma": "green", "Madison": "green", "Kenza": "green", "Madeleine": "blue"}
+    assert favorite_color(fave_colors) == "green"
+
+
+def test_favorite_color_random() -> None:
+    """Testing the most common color in a dictionary."""
+    fave_colors: dict[str, str] = {"a": "yellow", "b": "blue", "c": "green", "d": "orange", "e": "orange"}
+    assert favorite_color(fave_colors) == "orange"
+
+
+def test_favorite_color_empty() -> None:
+    """Testing an empty dictionary."""
+    fave_colors: dict[str, str] = {}
+    assert favorite_color(fave_colors) == ""
+
+
+def test_count_jobs() -> None:
+    """Testing counting the times each job appears in a list."""
+    times: list[str] = ["doctor", "doctor", "teacher", "professor", "teacher"]
+    assert count(times) == {"doctor": 2, "teacher": 2, "professor": 1}
+
+
+def test_count_names() -> None:
+    """Testing counting the times each name appears in a list."""
+    times: list[str] = ["Emma", "Ella", "Anna", "Ella", "Ally", "Ally", "Ella"]
+    assert count(times) == {"Emma": 1, "Ella": 3, "Anna": 1, "Ally": 2}
+
+
+def test_count_empty() -> None:
+    """Testing counting an empty list."""
+    times: list[str] = []
+    assert count(times) == {}
