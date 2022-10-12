@@ -1,6 +1,7 @@
 """Create your own adventure."""
 __author__ = "730484416"
 
+from random import randint
 
 points: int = 0
 player: str = ""
@@ -16,9 +17,6 @@ SEASHELL_EMOJI: str = "\U0001F41A"
 SHAMROCK_EMOJI: str = "\U00002618"
 STEW_EMOJI: str = "\U0001F372"
 WORLD_MAP_EMOJI: str = "\U0001F5FA"
-
-
-from random import randint
 
 
 def greet() -> None:
@@ -162,7 +160,7 @@ def arctic(local_points: int) -> int:
     chairs: str = ""
     print("Burrrr, it sure is cold here! And so bright with the sun shining so strongly on the snow...")
     print("Hey! Watch your step, I think I just saw something move, but I can't tell...")
-    print(f"Woah! Is the snow around your feet... cuddling up to you? Wait a minute, that's a polar bear cub!")
+    print("Woah! Is the snow around your feet... cuddling up to you? Wait a minute, that's a polar bear cub!")
     polar_bear_cub = input("Aww, it's so cute! Do you want to pet it? Or should we just go? (Be specific, 'pet it' or 'just go'). ")
     print(f"{WORLD_MAP_EMOJI} {WORLD_MAP_EMOJI} {WORLD_MAP_EMOJI}")
     if polar_bear_cub == "pet it":
