@@ -1,6 +1,7 @@
 """Idk yet."""
 __author__: "730484416"
 
+
 def invert(given_dict: dict[str, str]) -> dict[str, str]:
     """Inverting the key and value of a list."""
     result: dict[str, str] = {}
@@ -12,7 +13,7 @@ def invert(given_dict: dict[str, str]) -> dict[str, str]:
 
 
 def favorite_color(fave_colors: dict[str, str]) -> str:
-    """fave color"""
+    """Taking a dictionary and returning the most common value."""
     result: dict[str, int] = {}
     for key in fave_colors:
         if fave_colors[key] in result:
@@ -29,7 +30,7 @@ def favorite_color(fave_colors: dict[str, str]) -> str:
 
 
 def count(times: list[str]) -> dict[str, int]:
-    """count"""
+    """Counting how many times each item occurs in a list."""
     result: dict[str, int] = {}
     for i in times:
         if i in result:
