@@ -42,7 +42,6 @@ class Cell:
         self.direction = direction
 
     def tick(self) -> None:
-        """Assigning infected cells a recovery period and then immunizing them when the period is over."""
         self.location = self.location.add(self.direction)
         if self.is_infected():
             self.sickness += 1
@@ -61,7 +60,7 @@ class Cell:
         return result
     
     def contract_disease(self) -> None:
-        """Making a cell contract a disease."""
+        """"Making a cell contract a disease."""
         self.sickness = constants.INFECTED
     
     def is_vulnerable(self) -> bool:
@@ -97,24 +96,22 @@ class Cell:
             return False
 
 
+
 class Model:
     """The state of the simulation."""
 
     population: list[Cell]
     time: int = 0
 
-    def __init__(self, cells: int, speed: float, infected_cells: int, immune_cells: int = 0): 
+    def __init__(self, cells: int, speed: float, infected_cells: int, immune_cells: int = 0):  # given number of cells and speed we want them moving around at
         """Initialize the cells with random locations and directions."""
-        self.population = []
+        self.population = []  # initialized to be an empty list; construct cells number of new cells and set them up so that they have random locations and random speeds
         for i in range(cells):
             start_location: Point = self.random_location()
             start_direction: Point = self.random_direction(speed)
             cell: Cell = Cell(start_location, start_direction)
             self.population.append(cell)
-        if infected_cells <= 0 or infected_cells >= len(self.population):
-            raise ValueError("Incorrect number of infected cells to begin the simulation.")
-        if immune_cells >= len(self.population) or immune_cells < 0:
-            raise ValueError("Incorrect number of immune cells to begin the simulation.")
+        # ADD A LOOP (for in range)
         for i in range(infected_cells):
             self.population[i].contract_disease()
         i: int = infected_cells
@@ -172,7 +169,7 @@ class Model:
 
     def is_complete(self) -> bool:
         """Method to indicate when the simulation is complete."""
-        i: int = 0
+        i : int = 0
         while i < len(self.population):
             if self.population[i].is_infected():
                 return False
